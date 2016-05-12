@@ -2,7 +2,7 @@ var express = require('express');
 
 var app = express();
 
-app.route('/api/whoami').get(function (req, res) {
+app.route('/').get(function (req, res) {
     var software = req.headers['user-agent'].match(/\((.*?)\)/)[0];
     res.json({
         ipaddress: req.headers['x-forwarded-for'],
